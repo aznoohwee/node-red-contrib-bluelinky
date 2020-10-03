@@ -24,7 +24,11 @@
         defaults: {
             name: { value: "Start car" },
             bluelinky: { value: "Bluelinky config", type: "bluelinky" },
+            data: { value: '' },
         },
+        oneditprepare: function() {
+            const $data = $('#node-input-data');
+        }
         inputs: 1,
         outputs: 1,
         icon: "bluelinky.png",
@@ -170,6 +174,10 @@
     <div class="form-row">
         <label for="node-input-bluelinky"><i class="icon-tag"></i> Config</label>
         <input type="text" id="node-input-bluelinky" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for "node-input-data"><i class="icon-tag"></i> Data</label>
+        <input type="text" id="node-input-data" placeholder="Name">
     </div>
 </script>
 

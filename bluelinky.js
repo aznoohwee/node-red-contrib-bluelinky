@@ -121,7 +121,7 @@ module.exports = function (RED) {
     node.on('input', async function (msg) {
       try {
         const car = await client.getVehicle(this.bluelinkyConfig.vin);
-        const result = await car.start(msg.payload);
+        const result = await car.start(config.data);
         node.send({
           payload: result,
         });
