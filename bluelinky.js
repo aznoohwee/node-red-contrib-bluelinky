@@ -124,10 +124,12 @@ module.exports = function (RED) {
         const result = await car.start(config.data);
         node.send({
           payload: result,
+          data: config.data,
         });
       } catch (err) {
         node.send({
           payload: err,
+          data: config.data,
         });
       }
     });
